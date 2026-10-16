@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd">
+  <Name value="AIInfluence - Antigravity" />
+  <Id value="AIInfluenceAntigravity" />
+  <Version value="v1.1.0" />
+  <Author value="demxzeth" />
+  <Official value="false" />
+  <DefaultModule value="false" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <ModuleCategory value="Singleplayer" />
+  <Description>
+    Direct Google Antigravity bridge for AIInfluence: routes all in-game dialogue and events
+    through local agy.exe CLI with two-stage memory pipelining, JSON repair, live timers and MCM settings.
+  </Description>
+
+  <DependedModules>
+    <DependedModule Id="Bannerlord.Harmony" />
+    <DependedModule Id="Bannerlord.MBOptionScreen" />
+    <DependedModule Id="AIInfluence" />
+    <DependedModule Id="Native" />
+    <DependedModule Id="SandBoxCore" />
+    <DependedModule Id="Sandbox" />
+    <DependedModule Id="CustomBattle" />
+    <DependedModule Id="StoryMode" />
+  </DependedModules>
+
+  <DependedModuleMetadatas>
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="AIInfluence" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" />
+  </DependedModuleMetadatas>
+
+  <SubModules>
+    <SubModule>
+      <Name value="AIInfluence - Antigravity" />
+      <DLLName value="AIInfluenceAntigravity.dll" />
+      <SubModuleClassType value="AIInfluenceAntigravity.SubModule" />
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+      </Tags>
+    </SubModule>
+  </SubModules>
+</Module>

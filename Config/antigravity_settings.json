@@ -1,0 +1,14 @@
+{
+  "Enabled": true,
+  "TimerInChat": true,
+  "CliPath": "",
+  "Model": "gemini-3.8-flash-low",
+  "AvailableModels": [],
+  "ReasoningEffort": "Default",
+  "TimeoutSeconds": 360,
+  "Temperature": 1.0,
+  "MaxTokens": 0,
+  "LogEnabled": true,
+  "JsonRepair": true,
+  "ErrorNotices": true
+}
