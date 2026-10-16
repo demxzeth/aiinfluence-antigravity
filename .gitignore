@@ -9,3 +9,5 @@ dist/
 .vs/
 .idea/
 .vscode/
+deploy.ps1
+NEXUS_DESCRIPTION.md
