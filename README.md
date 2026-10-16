@@ -61,17 +61,12 @@ Lightweight, high-performance bridge between **Mount & Blade II: Bannerlord** (v
 
 ## Building from Source
 
-Run `build.bat` from the root directory:
+Build the project using .NET SDK:
 ```cmd
-build.bat
+dotnet build src\AIInfluenceAntigravity.csproj -c Release
 ```
 
-To create a release archive:
-```powershell
-powershell -ExecutionPolicy Bypass -File package.ps1
-```
-
-To deploy to your game directory:
-```powershell
-powershell -ExecutionPolicy Bypass -File deploy.ps1
+Run test suite:
+```cmd
+dotnet test tests\AIInfluenceAntigravity.Tests.csproj -c Release
 ```
