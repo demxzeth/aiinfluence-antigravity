@@ -20,6 +20,7 @@ New-Item -ItemType Directory -Force -Path $payload | Out-Null
 Copy-Item -LiteralPath (Join-Path $root 'SubModule.xml') $payload
 if (Test-Path (Join-Path $root 'README.md')) { Copy-Item -LiteralPath (Join-Path $root 'README.md') $payload }
 if (Test-Path (Join-Path $root 'CHANGELOG.md')) { Copy-Item -LiteralPath (Join-Path $root 'CHANGELOG.md') $payload }
+if (Test-Path (Join-Path $root 'LICENSE')) { Copy-Item -LiteralPath (Join-Path $root 'LICENSE') $payload }
 if (Test-Path (Join-Path $root 'new-prompts-detection')) {
     Copy-Item -LiteralPath (Join-Path $root 'new-prompts-detection') $payload -Recurse
 }
@@ -50,7 +51,7 @@ if ($IncludeSource) {
     $srcStage = Join-Path $env:TEMP ('agy-src-' + [guid]::NewGuid().ToString('N'))
     $srcPayload = Join-Path $srcStage 'AIInfluenceAntigravity'
     New-Item -ItemType Directory -Force -Path $srcPayload | Out-Null
-    foreach ($item in @('src','tests','build.bat','package.ps1','deploy.ps1','.gitignore','SubModule.xml','Config','README.md','CHANGELOG.md')) {
+    foreach ($item in @('src','tests','build.bat','package.ps1','.gitignore','SubModule.xml','Config','README.md','CHANGELOG.md','LICENSE')) {
         $p = Join-Path $root $item
         if (Test-Path -LiteralPath $p) { Copy-Item -LiteralPath $p -Destination $srcPayload -Recurse }
     }
